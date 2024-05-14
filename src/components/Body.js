@@ -1,11 +1,14 @@
 import Card from "./Card";
 import mockData from "../utils/mockData";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [resData, setResData] = useState([]);
 
-  useEffect(() => fetchData(), []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     const data = await fetch(
@@ -15,9 +18,13 @@ const Body = () => {
     const json = await data.json();
 
     setResData(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  if (resData.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="res-body">
