@@ -1,5 +1,4 @@
 import Card from "./Card";
-import mockData from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 

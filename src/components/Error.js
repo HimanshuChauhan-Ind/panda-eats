@@ -1,4 +1,3 @@
-import Header from "./Header";
 import { useRouteError } from "react-router-dom";
 
 const Error = () => {
@@ -7,7 +6,6 @@ const Error = () => {
 
   return (
     <div>
-      <Header />
       <h1>Oppss... Something went wrong</h1>
       <h3>
         {err.status} : {err.statusText}
