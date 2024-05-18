@@ -10,7 +10,9 @@ const Header = () => {
       <img className="logo" alt="App logo" src={LOGO_URL}></img>
       <div className="nav-links">
         <ul>
-          <li>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>
             <Link to="/about">About US</Link>
           </li>
