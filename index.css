@@ -65,3 +65,15 @@
 .search-btn {
   margin-left: 5px;
 }
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userInfo {
+  border: 1px solid black;
+  width: 300px;
+  margin: 5px;
+  padding: 5px;
+}
