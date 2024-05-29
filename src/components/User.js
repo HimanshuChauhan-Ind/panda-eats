@@ -5,6 +5,14 @@ const User = () => {
 
   useEffect(() => {
     userData();
+
+    const timer = setInterval(() => {
+      console.log("Inside UseEffect User");
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   const userData = async () => {
