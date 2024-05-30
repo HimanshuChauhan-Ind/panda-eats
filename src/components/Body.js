@@ -2,6 +2,7 @@ import Card from "./Card";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineCheck from "../utils/useOnlineCheck";
 
 const Body = () => {
   const [resData, setResData] = useState([]);
@@ -28,6 +29,12 @@ const Body = () => {
   };
 
   const [searchTxt, setSearchTxt] = useState("");
+
+  const onlineCheck = useOnlineCheck();
+  console.log(onlineCheck);
+  if (onlineCheck === false) {
+    return <h1>We lost you there, please check your Network!!</h1>;
+  }
 
   return resData.length === 0 ? (
     <Shimmer />
