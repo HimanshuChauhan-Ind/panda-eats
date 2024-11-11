@@ -6,21 +6,21 @@ const Header = () => {
   const [btnStatus, setBtnStatus] = useState("Login");
 
   return (
-    <div className="header">
-      <img className="logo" alt="App logo" src={LOGO_URL}></img>
-      <div className="nav-links">
-        <ul>
-          <li>
+    <div className="flex justify-between shadow-md">
+      <img className="w-32 mx-4" alt="App logo" src={LOGO_URL}></img>
+      <div className="flex">
+        <ul className="flex px-4 items-center">
+          <li className="mx-4">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="mx-4">
             <Link to="/about">About US</Link>
           </li>
-          <li>
+          <li className="mx-4">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>Cart</li>
-          <li>
+          <li className="mx-4">Cart</li>
+          <li className="mx-4">
             <button
               className="sign-btn"
               onClick={() =>
